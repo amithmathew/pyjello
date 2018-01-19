@@ -5,6 +5,7 @@ output/
 *#
 \#*
 pyjello.db
+backup/*
 
 
 # Byte-compiled / optimized / DLL files
