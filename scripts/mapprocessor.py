@@ -81,7 +81,6 @@ class MapProcessor:
             del indict['pinned']
         else:
             outdict['pinned'] = False
-            rewrite_flag = True
 
         # Tags
         if 'tags' in metadict:
@@ -89,7 +88,6 @@ class MapProcessor:
             del indict['tags']
         else:
             outdict['tags'] = None
-            rewrite_flag = True
 
         # Add any remaining custom attributes into outdict
         outdict.update(indict)

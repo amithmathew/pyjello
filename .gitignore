@@ -6,6 +6,8 @@ output/
 \#*
 pyjello.db
 backup/*
+*.sublime-project
+*.sublime-workspace
 
 
 # Byte-compiled / optimized / DLL files
