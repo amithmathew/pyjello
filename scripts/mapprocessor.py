@@ -110,11 +110,10 @@ class MapProcessor:
         if len(filelist) == 0:
             logging.info('No files to process for map %s!' % mapname)
             return []
-        if not self.j2env:
-            self.j2env = Environment(
-                loader=FileSystemLoader(self.mapping[mapname]['templates']),
-                autoescape=select_autoescape(['xml'])
-            )
+        self.j2env = Environment(
+            loader=FileSystemLoader(self.mapping[mapname]['templates']),
+            autoescape=select_autoescape(['xml'])
+        )
 
         # Load article.html
         template_name = 'article.html'
@@ -203,11 +202,6 @@ class MapProcessor:
         
         # Index Rebuild
         logging.info('Rebuilding index.html for mapname %s' % mapname)
-        if not self.j2env:
-            self.j2env = Environment(
-                                 loader = FileSystemLoader(self.mapping[mapname]['templates']),
-                              autoescape = select_autoescape(['xml'])
-            )
         # Load article_list.html
         template_name = 'article_list.html'
         logging.info('Processing %s' % template_name)
