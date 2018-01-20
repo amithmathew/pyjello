@@ -41,7 +41,8 @@ def conf_checks():
          pjc_varcheck('STATIC_INDEX', 'True')
          pjc_varcheck('INDEX_FILE', 'static/index.html')
          pjc_varcheck('CHECK_DIFF_HASH', 'False')
-         pjc_varcheck('PYJELLO_IGNORE', []) 
+         pjc_varcheck('PYJELLO_IGNORE', [])
+         pjc_varcheck('COMMON_TEMPLATES', [])
 
          for sd in pjc.STATIC_DIRS:
              if not os.path.isdir(sd):

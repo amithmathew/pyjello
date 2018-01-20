@@ -107,11 +107,13 @@ class MapProcessor:
 
         indexlist = []
 
+        template_paths = [ self.mapping[mapname]['templates'], pjc.COMMON_TEMPLATES]
+
         if len(filelist) == 0:
             logging.info('No files to process for map %s!' % mapname)
             return []
         self.j2env = Environment(
-            loader=FileSystemLoader(self.mapping[mapname]['templates']),
+            loader=FileSystemLoader(template_paths),
             autoescape=select_autoescape(['xml'])
         )
 

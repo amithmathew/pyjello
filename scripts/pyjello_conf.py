@@ -4,6 +4,7 @@ OUTPUT_DIR = 'output'
 STATIC_DIRS = ['static']
 STATIC_INDEX = True
 INDEX_FILE = 'static/index.html'
+COMMON_TEMPLATES = 'templates/common'
 
 BACKUP_ROOT = "backup"
 

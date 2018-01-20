@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <meta name="author" content="Amith Mathew">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>{% block title %}{% endblock title %}</title>
+    {% endblock head %}
+  </head>
+  <body>
+    <header role="banner">
+      {% block heading %}
+      {% endblock heading %}
+      <p class="lead text-center">{% block quote %}{% endblock quote %}</p>
+      <hr class="my-4" >
+      <p class="lead text-center simple-nav" >
+        <a href="/" id="hide-link" >About</a> |
+        <a href="/blog" id="hide-link" >Blog</a> |
+        <a href="/projects" id="hide-link" >Projects</a> |
+        <a href="/stories" id="hide-link" >Stories</a> |
+        <a href="/resources" id="hide-link" >Resources</a> |
+        <a href="/reading" id="hide-link" ><span style="word-spacing:0.05rem">Reading List</span></a> |
+        <a href="/#contact" id="hide-link">Contact</a>
+      </p>
+    </header>
+    <div role="main" class="container" >
+       {% block mainbody %}
+       {% endblock mainbody %}
+    </div>
+    <footer>
+      <p role="contentinfo" class="text-center footer" >
+            Copyright <span class="fa fa-copyright" aria-hidden="true"></span> 2017-2018 Amith Mathew
+      </p>  
+    </footer>
+  </body>
+</html>
